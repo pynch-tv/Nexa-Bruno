@@ -1,0 +1,24 @@
+meta {
+  name: Load start clip on program 1
+  type: http
+  seq: 9
+}
+
+patch {
+  url: {{base_url}}/servers/{{server}}/outputs/{{output}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "clip": {
+      "id": "000000C"
+    },
+    "status": "start"
+  }
+}

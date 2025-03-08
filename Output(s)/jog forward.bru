@@ -1,0 +1,21 @@
+meta {
+  name: jog forward
+  type: http
+  seq: 15
+}
+
+patch {
+  url: {{base_url}}/servers/{{server}}/outputs/{{output}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "jog": "+00:00:00:05"
+  }
+}

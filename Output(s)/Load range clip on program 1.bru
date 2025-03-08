@@ -1,0 +1,32 @@
+meta {
+  name: Load range clip on program 1
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{base_url}}/servers/{{server}}/outputs/{{output}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "clip": {
+      "id": "000000C",
+      "offset": {
+        "seconds": 1
+      },
+      "duration": {
+        "timecode": "00:00:01:25"
+      }
+    },
+    "status": "start",
+    "speed": 100
+  }
+  
+}

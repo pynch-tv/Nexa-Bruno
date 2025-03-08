@@ -1,0 +1,21 @@
+meta {
+  name: shuttle forward @ 200% speed
+  type: http
+  seq: 16
+}
+
+patch {
+  url: {{base_url}}/servers/{{server}}/outputs/{{output}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "shuttle": "+50"
+  }
+}

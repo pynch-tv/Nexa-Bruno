@@ -1,0 +1,11 @@
+meta {
+  name: Output PGM
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/servers/{{server}}/outputs/{{output}}
+  body: json
+  auth: none
+}
