@@ -1,0 +1,22 @@
+meta {
+  name: Clips met query
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/servers/{{server}}/clips?f=json&offset=10&query="HyperDeck_0006.mp4"&q=88
+  body: none
+  auth: none
+}
+
+params:query {
+  f: json
+  offset: 10
+  query: "HyperDeck_0006.mp4"
+  q: 88
+}
+
+headers {
+  ~Accept: application/json
+}
