@@ -1,0 +1,19 @@
+meta {
+  name: All PGM {}
+  type: http
+  seq: 18
+}
+
+patch {
+  url: {{base_url}}/servers/{{server}}/outputs
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {}
+}

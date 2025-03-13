@@ -1,0 +1,21 @@
+meta {
+  name: All PGM Play
+  type: http
+  seq: 19
+}
+
+patch {
+  url: {{base_url}}/servers/{{server}}/outputs
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "status": "play"
+  }
+}

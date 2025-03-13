@@ -1,0 +1,21 @@
+meta {
+  name: change name
+  type: http
+  seq: 17
+}
+
+patch {
+  url: {{base_url}}/servers/{{server}}/outputs/{{output}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "OUT1"
+  }
+}
