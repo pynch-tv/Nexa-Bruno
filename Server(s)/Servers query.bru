@@ -1,0 +1,20 @@
+meta {
+  name: Servers query
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/servers?q=Name eq "XT2" or clipCount eq 2&f=json
+  body: none
+  auth: none
+}
+
+params:query {
+  q: Name eq "XT2" or clipCount eq 2
+  f: json
+}
+
+headers {
+  Content-Type: application/json
+}
