@@ -5,9 +5,15 @@ meta {
 }
 
 get {
-  url: {{base_url}}/servers/{{server}}/clips?offset=0&limit=2
+  url: {{base_url}}/servers/{{server}}/clips?f=html&offset=11&limit=2
   body: none
   auth: none
+}
+
+params:query {
+  f: html
+  offset: 11
+  limit: 2
 }
 
 headers {

@@ -1,0 +1,19 @@
+meta {
+  name: Clips met pagination next
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/servers/{{server}}/clips?f=html
+  body: none
+  auth: none
+}
+
+params:query {
+  f: html
+}
+
+headers {
+  ~Accept: application/json
+}
