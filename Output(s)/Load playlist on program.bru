@@ -1,7 +1,7 @@
 meta {
-  name: jog backward
+  name: Load playlist on program
   type: http
-  seq: 13
+  seq: 6
 }
 
 patch {
@@ -16,6 +16,11 @@ headers {
 
 body:json {
   {
-    "jog": "-00:00:00:03"
+    "playlist": {
+      "id": "{{playlist}}",
+      "offset": {
+        "seconds": 1.2
+      }
+    }
   }
 }

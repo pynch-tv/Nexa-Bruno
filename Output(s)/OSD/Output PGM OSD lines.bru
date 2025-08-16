@@ -1,0 +1,11 @@
+meta {
+  name: Output PGM OSD lines
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/servers/{{server}}/outputs/{{output}}/osd/lines
+  body: json
+  auth: none
+}

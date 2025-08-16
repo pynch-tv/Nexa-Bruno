@@ -1,0 +1,17 @@
+meta {
+  name: Set Output PGM OSD line 1
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base_url}}/servers/{{server}}/outputs/{{output}}/osd/lines/2
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "line": "1"
+  }
+}

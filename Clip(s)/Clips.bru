@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{base_url}}/servers/{{server}}/clips
+  url: {{base_url}}/servers/{{server}}/clips?sortby=+name,-id
   body: none
   auth: none
+}
+
+params:query {
+  sortby:  name,-id
 }
 
 headers {

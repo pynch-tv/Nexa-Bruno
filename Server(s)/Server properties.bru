@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{base_url}}/servers/{{server}}
+  url: {{base_url}}/servers/{{server}}?properties=id
   body: none
   auth: none
+}
+
+params:query {
+  properties: id
 }
 
 headers {

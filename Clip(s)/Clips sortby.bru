@@ -1,17 +1,17 @@
 meta {
-  name: Clips met pagination next
+  name: Clips sortby
   type: http
-  seq: 4
+  seq: 2
 }
 
 get {
-  url: {{base_url}}/servers/{{server}}/clips?f=html
+  url: {{base_url}}/servers/{{server}}/clips?sortby=+name,-id
   body: none
   auth: none
 }
 
 params:query {
-  f: html
+  sortby: name,-id
 }
 
 headers {

@@ -1,0 +1,18 @@
+meta {
+  name: Enable Output PGM OSD
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/servers/{{server}}/outputs/{{output}}/osd
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "osd": true,
+    "error": false
+  }
+}
